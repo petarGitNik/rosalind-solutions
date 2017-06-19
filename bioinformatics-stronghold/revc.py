@@ -5,14 +5,12 @@
 # Input: A DNA string 's' having length at most 1000 nt
 # Output: The reverse complement of 's^c' of 's'
 
-# --- Funcitons --- #
+# --- Functions --- #
 def reverse_strand(strand):
     return strand[::-1]
 
 def complement_strand(strand):
     reverse = ''
-    # Name implies a function, alternative name could be: base_complement
-    # or use replace() string method
     give_me_a_complement_of = { 'A' : 'T', 'T' : 'A', 'G' : 'C', 'C' : 'G' }
     for nucleotide in reverse_strand(strand):
         reverse += give_me_a_complement_of[nucleotide]
